@@ -11,21 +11,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_FLO)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initBottomNavigation()
 
-        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString())
+        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString(),0,60,false)
 
-        binding.mainPlayerCl.setOnClickListener {
-            val intent = Intent(this, SongActivity::class.java)
-        }
+
 
         binding.mainPlayerCl.setOnClickListener {
             val intent = Intent(this,SongActivity::class.java)
             intent.putExtra("title", song.title)
             intent.putExtra("singer",song.singer)
+            intent.putExtra("second",song.second)
+            intent.putExtra("playTime",song.playTime)
+            intent.putExtra("isPlaying",song.isPlaying)
             startActivity(intent)
         }
 
