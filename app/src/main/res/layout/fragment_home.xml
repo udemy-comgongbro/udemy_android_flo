@@ -17,7 +17,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/img_first_album_default"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -247,7 +246,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/img_album_exp"
+                            android:src="@drawable/img_album_exp2"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -348,12 +347,21 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <ImageView
+<!--        <ImageView-->
+<!--            android:id="@+id/home_banner_vp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:src="@drawable/img_home_viewpager_exp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>-->
+
+        <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/img_home_viewpager_exp"
+            android:layout_height="100dp"
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
