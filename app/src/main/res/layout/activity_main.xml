@@ -10,7 +10,6 @@
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         app:layout_constraintBottom_toTopOf="@id/main_player_cl"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,42 +18,45 @@
         android:id="@+id/main_player_cl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/main_bnv"
+        android:background="#F9F9F9"
         android:paddingVertical="5dp"
-        android:background="#F9F9F9">
+        app:layout_constraintBottom_toTopOf="@id/main_bnv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/main_miniplayer_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="제목"
-                android:textColor="@color/black" />
+                android:text="라일락"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/main_miniplayer_singer_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
-
-                android:text="가수"/>
+                android:text="아이유 (IU)"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:gravity="center_vertical">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="40dp"
@@ -65,14 +67,14 @@
                 android:id="@+id/main_miniplayer_btn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/btn_miniplayer_play"/>
+                android:src="@drawable/btn_miniplayer_play" />
 
             <ImageView
                 android:id="@+id/main_pause_btn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:visibility="gone"
-                android:src="@drawable/btn_miniplay_pause"/>
+                android:src="@drawable/btn_miniplay_pause"
+                android:visibility="gone" />
 
 
             <ImageView
@@ -84,8 +86,8 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/btn_miniplayer_go_list"
-                android:layout_marginHorizontal="15dp" />
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/btn_miniplayer_go_list" />
 
 
         </LinearLayout>
