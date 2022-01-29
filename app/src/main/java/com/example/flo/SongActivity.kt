@@ -40,6 +40,30 @@ class SongActivity : AppCompatActivity() {
 
     }
 
+    override fun onPause() {
+        super.onPause()
+
+
+        song.second = ((binding.songProgressSb.progress * song.playTime)/100)/1000
+        song.isPlaying = false
+        setPlayerStatus(false)
+
+        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
+        val editor = sharedPreferences.edit() // 에디터
+
+        val songJson = gson.toJson(song)
+        editor.putString("songData", songJson)
+
+        editor.apply()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.interrupt()
+        mediaPlayer?.release()
+        mediaPlayer = null
+    }
+
     private fun initSong(){
         if(intent.hasExtra("title") && intent.hasExtra("singer")){
             song = Song(
@@ -130,23 +154,6 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-        setPlayerStatus(false)
-        song.second = ((binding.songProgressSb.progress * song.playTime)/100)/1000
-        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
-        val editor = sharedPreferences.edit() // 에디터
-        val songJson = gson.toJson(song)
-        editor.putString("songData", songJson)
 
-        editor.apply()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        timer.interrupt()
-        mediaPlayer?.release()
-        mediaPlayer = null
-    }
 
 }
