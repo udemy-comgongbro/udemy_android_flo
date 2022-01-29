@@ -18,6 +18,10 @@
         <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/drawable/splash.xml" value="0.1" />
         <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/activity_song.xml" value="0.1" />
+        <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/fragment_locker.xml" value="0.2375" />
+        <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/fragment_locker_musicfile.xml" value="0.2375" />
+        <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/fragment_locker_savedsong.xml" value="0.2375" />
+        <entry key="..\:/Users/jungwoo/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/item_song.xml" value="0.2375" />
       </map>
     </option>
   </component>
