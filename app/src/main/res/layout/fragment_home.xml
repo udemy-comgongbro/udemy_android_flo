@@ -213,139 +213,139 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
 
-        <HorizontalScrollView
-            android:id="@+id/home_today_music_oversea_hs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:scrollbars="none"
-            android:overScrollMode="never"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_tv">
+<!--        <HorizontalScrollView-->
+<!--            android:id="@+id/home_today_music_oversea_hs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:scrollbars="none"-->
+<!--            android:overScrollMode="never"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_tv">-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content">-->
 
-                        <ImageView
-                            android:id="@+id/home_album_img_iv1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/img_album_exp2"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="5dp"
-                            android:src="@drawable/widget_black_play"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LILAC"
-                        android:layout_marginTop="10dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="아이유 (IU)"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                        <ImageView-->
+<!--                            android:id="@+id/home_album_img_iv1"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:scaleType="fitCenter"-->
+<!--                            android:src="@drawable/img_album_exp2"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
 
 
-                </LinearLayout>
+<!--                        <ImageView-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:src="@drawable/widget_black_play"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="LILAC"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/black"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="아이유 (IU)"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_album_exp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="제목"
-                        android:layout_marginTop="10dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="가수명"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                </LinearLayout>-->
 
 
-                </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:src="@drawable/img_album_exp"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="제목"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/black"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="가수명"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_album_exp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="제목"
-                        android:layout_marginTop="10dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="가수명"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                </LinearLayout>-->
 
 
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:src="@drawable/img_album_exp"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="제목"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/black"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="가수명"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
+
+
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
 
 <!--        <ImageView-->
 <!--            android:id="@+id/home_banner_vp"-->
@@ -358,6 +358,16 @@
 <!--            app:layout_constraintEnd_toEndOf="parent"-->
 <!--            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>-->
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_today_music_album_rv"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_album"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_total_tv"/>
+
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"
             android:layout_width="match_parent"
@@ -365,7 +375,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_album_rv"/>
 
         <TextView
             android:id="@+id/home_daily_music_title_tv"
