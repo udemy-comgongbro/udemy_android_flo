@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/drawable/button_background_black_color.xml" value="0.38229166666666664" />
         <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/layout/activity_login.xml" value="0.3423913043478261" />
+        <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/layout/activity_song.xml" value="0.3423913043478261" />
         <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/layout/fragment_locker.xml" value="0.3423913043478261" />
+        <entry key="..\:/AndroidStudioProjects/udemy/udemy_android_flo/app/src/main/res/layout/item_album.xml" value="0.17603850050658562" />
         <entry key="..\:/AndroidStudioProjects/udemy_android_flo/app/src/main/res/drawable-v24/textview_background_radius.xml" value="0.38229166666666664" />
         <entry key="..\:/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidStudioProjects/udemy_android_flo/app/src/main/res/layout/activity_song.xml" value="0.1" />
