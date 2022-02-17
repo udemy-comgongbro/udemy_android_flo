@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivityLoginBinding
 
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +25,36 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+//    private fun login() {
+//        if (binding.loginIdEt.text.toString().isEmpty() || binding.loginDirectInputEt.text.toString().isEmpty()) {
+//            Toast.makeText(this, "이메일을 입력해주세요.", Toast.LENGTH_SHORT).show()
+//            return
+//        }
+//
+//        if (binding.loginPasswordEt.text.toString().isEmpty()) {
+//            Toast.makeText(this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+//            return
+//        }
+//
+//        val email = binding.loginIdEt.text.toString() + "@" + binding.loginDirectInputEt.text.toString()
+//        val password = binding.loginPasswordEt.text.toString()
+//
+//        val songDB = SongDatabase.getInstance(this)!!
+//
+//        //잘못된 유저 먼저 보여주
+//        val user = songDB.userDao().getUser(email, password)
+//
+//
+//        user?.let {
+//            Log.d("LOGIN_ACT/GET_USER", "userId: ${user.id}, $user")
+//            saveJwt(user.id)
+//
+//            startMainActivity()
+//        }
+//
+//        Toast.makeText(this, "회원 정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+//    }
+
     private fun login() {
         if (binding.loginIdEt.text.toString().isEmpty() || binding.loginDirectInputEt.text.toString().isEmpty()) {
             Toast.makeText(this, "이메일을 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -36,23 +66,17 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
+        val authService = AuthService()
+        authService.setLoginView(this)
+
+        authService.login(getUser())
+    }
+
+    private fun getUser(): User {
         val email = binding.loginIdEt.text.toString() + "@" + binding.loginDirectInputEt.text.toString()
         val password = binding.loginPasswordEt.text.toString()
 
-        val songDB = SongDatabase.getInstance(this)!!
-
-        //잘못된 유저 먼저 보여주
-        val user = songDB.userDao().getUser(email, password)
-
-
-        user?.let {
-            Log.d("LOGIN_ACT/GET_USER", "userId: ${user.id}, $user")
-            saveJwt(user.id)
-
-            startMainActivity()
-        }
-
-        Toast.makeText(this, "회원 정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+        return User(email = email, password = password, name = "")
     }
 
     private fun startMainActivity() {
@@ -66,5 +90,27 @@ class LoginActivity : AppCompatActivity() {
 
         editor.putInt("jwt", jwt)
         editor.apply()
+    }
+
+    private fun saveJwt2(jwt: String) {
+        val spf = getSharedPreferences("auth2" , MODE_PRIVATE)
+        val editor = spf.edit()
+
+        editor.putString("jwt", jwt)
+        editor.apply()
+    }
+
+    override fun onLoginSuccess(code : Int , result: Result) {
+        when(code) {
+            1000 -> {
+                saveJwt2(result.jwt)
+                startMainActivity()
+
+            }
+        }
+    }
+
+    override fun onLoginFailure() {
+
     }
 }

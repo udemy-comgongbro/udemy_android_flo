@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        Log.d("MAIN/JWT_TO_SERVER", getJwt().toString())
+
     }
 
     override fun onStart() {
@@ -60,6 +62,14 @@ class MainActivity : AppCompatActivity() {
         Log.d("song ID", song.id.toString())
         setMiniPlayer(song)
     }
+
+
+    private fun getJwt(): String? {
+        val spf = this.getSharedPreferences("auth2" , AppCompatActivity.MODE_PRIVATE)
+
+        return spf!!.getString("jwt", "")
+    }
+
 
     private fun initBottomNavigation(){
 
